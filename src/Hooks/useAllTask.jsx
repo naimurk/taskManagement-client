@@ -5,7 +5,7 @@ const useAllTask = () => {
     const {data : AllTask=[], refetch } = useQuery({
         queryKey: ["AllTask"],
         queryFn: async ()=> {
-            const res = await fetch("http://localhost:5000/all-taskList")
+            const res = await fetch("https://task-management-server-eosin.vercel.app/all-taskList")
             return res.json();
         }
     })

@@ -18,7 +18,7 @@ const Form = () => {
 
    console.log(data);
 
-    fetch("http://localhost:5000/addJob",{
+    fetch("https://task-management-server-eosin.vercel.app/addJob",{
         method: "POST",
         headers: {
             "content-type" : "application/json"

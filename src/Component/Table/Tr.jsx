@@ -34,7 +34,7 @@ const Tr = ({ item, index }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${id}`, {
+                fetch(`https://task-management-server-eosin.vercel.app/delete/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -64,7 +64,7 @@ const Tr = ({ item, index }) => {
     // form data 
     const onSubmit = (data) => {
 
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://task-management-server-eosin.vercel.app/update/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data)
